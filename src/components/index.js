@@ -1,12 +1,3 @@
-import React from 'react'
+import Navbar from "./Navbar"
 
-const index = () => {
-  return (
-    <div>
-      hello
-    </div>
-  )
-}
-
-export default index
-
+export {Navbar}
