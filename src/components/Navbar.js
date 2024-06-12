@@ -1,10 +1,12 @@
 import React from 'react';
+import logo from '../assets/logo.jpg'
 //import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center',fontFamily:'San Francisco, Helvetica, Arial, san-serifery',}}>
-      <div>
+      <div style={{ display: 'flex'}}>
+        <img style={styles.logo} src={logo} alt="Logo"/>
         <h3 style={styles.heading}>Artisan <span style={{color:'red'}}>Alley</span></h3>
       </div>
       <div style={styles.navLinks}>
@@ -19,17 +21,22 @@ const Navbar = () => {
 };
 
 const styles = {
+  logo:{
+    backgroundImage:`url(${logo})`,
+    margin:'4vh 1vh 0 4vh',
+    height: '8vh', 
+    width: '9vh', 
+  },
   heading: {
     fontFamily:'Snell Roundhand, cursive',
     fontSize: '5vh',
-    paddingLeft:'5vh',
     
   },
   navLinks: {
     fontSize: '2.5vh',
     display: 'flex',
     gap: '7vh',
-    marginRight:'2vh',
+    marginRight:'4vh',
     cursor: 'pointer', 
   },
   navLink:{
