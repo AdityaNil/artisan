@@ -1,8 +1,18 @@
 import React from 'react';
 import logo from '../assets/logo.jpg'
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handlelogin = () => {
+    navigate("/Login")
+  }
+
+  const handlesignup = () => {
+    navigate("/Signup") 
+  }
+
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center',fontFamily:'San Francisco, Helvetica, Arial, san-serifery',}}>
       <div style={{ display: 'flex'}}>
@@ -13,8 +23,8 @@ const Navbar = () => {
         <h4 style={styles.navLink}>Explore</h4>
         <h4 style={styles.navLink}>About</h4>
         <h4 style={styles.navLink}>Business</h4>
-        <h4 style={styles.navItem1}>Log in</h4>
-        <h4 style={styles.navItem2}>Sign Up</h4>
+        <h4 style={styles.navItem1} onClick={handlelogin}>Log in</h4>
+        <h4 style={styles.navItem2} onClick={handlesignup}>Sign Up</h4>
       </div>      
     </div>
   );
