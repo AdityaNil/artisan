@@ -9,15 +9,16 @@ const items = [
   { src: i2, title: 'Image 2' },
   { src: i3, title: 'Image 3' },
   { src: i4, title: 'Image 4' },
-  { src: i1, title: 'Image 5' },
+  { src: i3, title: 'Image 5' },
   { src: i2, title: 'Image 6' },
-  { src: i3, title: 'Image 7' },
+  { src: i1, title: 'Image 7' },
 ];
 
 const Home = () => {
   return (
     <div>
-      <h1 style={styles.heading}>Let's Explore</h1>
+      <h1 style={styles.heading}>Let's <spam style={{color:'#3572EF'}}>Explore</spam></h1>
+      
       <div style={styles.masonry}>
         {items.map((item, index) => (
           <div key={index} style={styles.card}>
@@ -31,8 +32,10 @@ const Home = () => {
 
 const styles = {
   heading: {
+    fontSize:'10vh',
     textAlign: 'center',
     margin: '20px 0',
+    paddingBottom:'10.5vh'
   },
   masonry: {
     display: 'flex',
